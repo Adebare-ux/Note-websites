@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header-section">
+
+      <div class="header">
+        Homepage
+      </div>
+
+      <a href="index3.html" class="add-link">
+        <button class="add-button">
+          <img src="icons/add2.webp" class="add-icon">
+          <div class="tooltip">Add Note</div>
+        </button>
+      </a>
+
+    </div>
+    <div class="note-header">
+      All Notes
+    </div>
+    <div class="note-list">
+      <a href="index2.html">
+        <div class="note1">
+          <p class="note context"> Physics Note</p>
+          <button id="open" class="delete-button">Delete</button>
+        </div>
+      </a>
+    </div>
+    <hr>
+    <div class="note-list">
+
+      <div class="note2">
+        <p class="note context"> Chemistry Note</p>
+        <button id="open" class="delete-button">Delete</button>
+      </div>
+    </div>
+    <hr>
+
+    <div class="modal-container" id="modal-container">
+      <div class="modal">
+        <h1> Delete Note</h1>
+        <p>Are you sure you want to delete this note?</p>
+        <button id="close" class="confirm-delete">Yes</button>
+        <button id="close" class="cancel-delete">No</button>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
