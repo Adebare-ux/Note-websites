@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Note</title>
+  <link rel="stylesheet" href="./add-note.css">
+  <script defer src="./add-note.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="page-header">
+      <button class="back-button" onclick="history.back()" aria-label="Go back">
+        <span aria-hidden="true">←</span>
+      </button>
+      <h1 class="page-title">New Note</h1>
+      <button class="save-button" id="saveNote">
+        <span class="save-icon" aria-hidden="true">✓</span>
+        Save
+      </button>
+    </header>
+
+    <main class="note-form">
+      <div class="form-group">
+        <label for="noteTitle" class="form-label">Title</label>
+        <input 
+          type="text" 
+          id="noteTitle"
+          class="form-input title-input" 
+          placeholder="Enter note title..."
+          maxlength="100"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="noteBody" class="form-label">Content</label>
+        <textarea 
+          id="noteBody"
+          class="form-textarea" 
+          placeholder="Write your note here..."
+          rows="12"
+          required
+        ></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn btn-secondary" onclick="history.back()">
+          Cancel
+        </button>
+        <button type="button" class="btn btn-primary" id="createNote">
+          Create Note
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Success Toast -->
+  <div class="toast" id="successToast">
+    <div class="toast-content">
+      <span class="toast-icon">✓</span>
+      <span class="toast-message">Note created successfully!</span>
+    </div>
+  </div>
+
+</body>
+
+</html>
