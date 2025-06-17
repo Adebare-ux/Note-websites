@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to right, #f2f1f3, #c6a3dd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 35%;
+  height: 100vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: #d7c5e4;
+  margin: 10px;
+}
+
+.edit {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.text {
+  font-size: 16px;
+  color: black;
+  margin: 10px;
+}
+
+
+.text-box {
+  width: 100%;
+  max-width: 350px;
+  height: 60px;
+  font-size: 12px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.body-note {
+  margin: 5px;
+}
+
+.save {
+  cursor: pointer;
+  margin: 10px;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+.note-title {
+  font-size: 12px;
+  margin: 10px;
+}
+
+.update {
+  padding: 5px 5px;
+  background-color: #a575c5;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    height: auto;
+  }
+
+  .text-box {
+    width: 70%;
+    max-width: 100%;
+  }
+}
