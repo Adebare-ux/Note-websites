@@ -11,50 +11,38 @@
 
 <body>
   <div class="container">
-    <div class="header-section">
-
-      <div class="header">
-        Homepage
-      </div>
-
-      <a href="index3.html" class="add-link">
+    <!-- Header Section -->
+    <header class="header-section">
+      <h1 class="header">Homepage</h1>
+      <a href="./add-note.html" class="add-link" aria-label="Add new note">
         <button class="add-button">
-          <img src="icons/add2.webp" class="add-icon">
-          <div class="tooltip">Add Note</div>
+          <span class="add-icon" aria-hidden="true">+</span>
+          <span class="tooltip">Add Note</span>
         </button>
       </a>
-
-    </div>
-    <div class="note-header">
-      All Notes
-    </div>
-    <div class="note-list">
-      <a href="index2.html">
-        <div class="note1">
-          <p class="note context"> Physics Note</p>
-          <button id="open" class="delete-button">Delete</button>
-        </div>
-      </a>
-    </div>
-    <hr>
-    <div class="note-list">
-
-      <div class="note2">
-        <p class="note context"> Chemistry Note</p>
-        <button id="open" class="delete-button">Delete</button>
+    </header>
+    
+    <!-- Notes Section -->
+    <main>
+      <h2 class="note-header">All Notes</h2>
+      
+      <!-- Notes List -->
+      <div class="notes-container" id="notesContainer">
+        <!-- Notes will be rendered here by JS -->
       </div>
-    </div>
-    <hr>
+    </main>
 
-    <div class="modal-container" id="modal-container">
+    <!-- Delete Confirmation Modal -->
+    <div class="modal-overlay" id="modal-container" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
       <div class="modal">
-        <h1> Delete Note</h1>
-        <p>Are you sure you want to delete this note?</p>
-        <button id="close" class="confirm-delete">Yes</button>
-        <button id="close" class="cancel-delete">No</button>
+        <h3 id="modal-title">Delete Note</h3>
+        <p>Are you sure you want to delete "<span id="note-name"></span>"?</p>
+        <div class="modal-actions">
+          <button id="confirm-delete" class="btn btn-danger">Delete</button>
+          <button id="cancel-delete" class="btn btn-secondary">Cancel</button>
+        </div>
       </div>
     </div>
-
   </div>
 </body>
 

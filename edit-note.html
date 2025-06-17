@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit Note</title>
+  <link rel="stylesheet" href="edit-note.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">Edit Note</h1>
+      <button class="btn" id="editBtn" aria-label="Enable editing">
+        <span aria-hidden="true">✏️</span> Edit
+      </button>
+    </header>
+
+    <div class="alert" id="alert" role="alert" aria-live="polite">
+      Note updated successfully!
+    </div>
+
+    <form id="noteForm" novalidate>
+      <div class="field">
+        <label class="label" for="noteTitle">Title</label>
+        <input 
+          type="text" 
+          id="noteTitle"
+          spellcheck="false"
+        >
+        <div class="sr-only" id="titleError" aria-live="polite"></div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="noteContent">Content</label>
+        <textarea 
+          id="noteContent"
+          spellcheck="true"
+          rows="10"
+          style="min-height: 180px; width: 100%; resize: vertical;"
+        ></textarea>
+        <div class="sr-only" id="contentError" aria-live="polite"></div>
+      </div>
+
+      <div class="actions hidden" id="actions">
+        <button type="button" class="btn btn-secondary" id="cancelBtn">
+          Cancel
+        </button>
+        <button type="submit" class="btn btn-primary" id="saveBtn">
+          Save Changes
+        </button>
+      </div>
+    </form>
+
+    <div class="actions" id="navActions">
+      <button type="button" class="btn" onclick="history.back()">
+        <span aria-hidden="true">←</span> Back
+      </button>
+    </div>
+  </div>
+
+  <script src="edit-note.js"></script>
+</body>
+</html>
